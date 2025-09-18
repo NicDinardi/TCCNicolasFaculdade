@@ -1,0 +1,127 @@
+:root{
+--champagne-pink: #ffe7daff;
+--champagne-pink-2: #fdebddff;
+--pale-dogwood: #d1b3a6ff;
+--beaver: #997a6eff;
+--liver: #6a483cff;
+}
+
+footer{
+    width: 100%;
+}
+
+#footer_content{
+    background-color: var(--beaver);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_media{
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+#footer_media .footer-link {
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--champagne-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+#footer_media .footer-link i{
+    font-size: 1.25rem;
+}
+
+#footer_media .footer-link:hover{
+    opacity: 0.8;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+    text-decoration: none;
+}
+
+.footer-list .footer-link{
+    color: var(--champagne-pink);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.footer-list .footer-link:hover {
+    color: var(--liver);
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--champagne-pink);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border: 4px;
+}
+
+#input_group input{
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: var(--liver);
+    color: var(--champagne-pink);
+    border: none;
+    padding: 1.25rem;
+    
+}
+
+
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background: #4267b3;
+}
+
+#google {
+    background: #EA4335;
+}
+
+@media screen and (max-width: 1160px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    
+    }
+}
+
+@media screen and (max-width: 460px) {
+    #footer_content {
+        grid-template-columns: repeat(1 1fr);
+        gap: 3rem 2rem;
+}
+}
+
