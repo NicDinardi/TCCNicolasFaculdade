@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="src/styles/home.css">
     <link rel="stylesheet" href="src/styles/menu.css">
     <link rel="stylesheet" href="src/styles/footer.css">
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Landing Page - Costuras da Rai</title>
@@ -23,14 +27,14 @@
                     <a href="#home">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#servi">Serviços</a>
+                    <a href="#menu">Serviços</a>
                 </li>
                 <li class="nav-item">
                     <a href="#sobre">Sobre</a>
                 </li>
             </ul>
 
-            <button class="btn-default">
+            <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
                 Agende um horario
             </button>
 
@@ -45,14 +49,14 @@
                     <a href="#home">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#servi">Serviços</a>
+                    <a href="#menu">Serviços</a>
                 </li>
                 <li class="nav-item">
                     <a href="#sobre">Sobre</a>
                 </li>
             </ul>
 
-            <button class="btn-default">
+            <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
                 Agende um horario
             </button>
         </div>
@@ -72,7 +76,8 @@
             </p>
 
             <div id="cta_buttons">
-                <a href="#" class="btn-default">Agende seu Horario</a>
+                <a href="#" class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">Agende seu Horario</a>
+                
                 <a href="tel: +00000000" id="phone_button">
                     <button class="btn-default">
                         <i class="fa-brands fa-whatsapp"></i>
@@ -82,17 +87,13 @@
             </div>
 
             <div class="social-media-buttons">
-
                 <a href="">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-
                 <a href="">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
-
-
         </div>
 
         <div id="banner">
@@ -101,138 +102,89 @@
        </section> 
 
        <section id="menu">
-        <h2 class="section-title">Serviços</h2>
-        <h3 class="section-subtitle">Todos os serviços</h3>
-
-        <div id="serv">
-            <div class="tdserv">
-                
-                <img src="" class="serv-image" alt="">
-
-                <h3 class="serv-title">
-                    Roupas
-                </h3>
-
-                <span class="description-serv">
-                    Modelagem e fabricação de peças
-                </span>
-
-            </div>
-
-            <div class="tdserv">
-                
-                <img src="" class="serv-image" alt="">
-
-                <h3 class="serv-title">
-                    Lorem Ipsum
-                </h3>
-
-                <span class="description-serv">
-                    Lorem Ipsum sit amet
-                </span>
-
-            </div>
-
-            <div class="tdserv">
-                
-                <img src="" class="serv-image" alt="">
-
-                <h3 class="serv-title">
-                    Lorem Ipsum
-                </h3>
-
-                <span class="description-serv">
-                    Lorem Ipsum sit amet
-                </span>
-
-            </div>
-
-            <div class="tdserv">
-
-                <img src="" class="serv-image" alt="">
-
-                <h3 class="serv-title">
-                    Lorem Ipsum
-                </h3>
-
-                <span class="description-serv">
-                    Lorem Ipsum sit amet
-                </span>
-                    
+            <h2 class="section-title">Serviços</h2>
+            <h3 class="section-subtitle">Conheça meu serviço</h3>
+        
+            <div class="service-card-container">
+                <div class="service-card">
+                    <img src="src/Imgs/IconeTesoura.png" alt="Criação Sob Medida" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Criação Sob Medida</h3>
+                        <p class="card-description">Desenvolvimento de peças únicas, desde o design inicial até o acabamento final.</p>
+                    </div>
+                </div>
+        
+                <div class="service-card">
+                    <img src="src/Imgs/IconeAlfinete.png" alt="Ajustes e Reparos" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Ajustes e Reparos</h3>
+                        <p class="card-description">Ajustes de caimento, bainhas, consertos e customização de peças do seu guarda-roupa.</p>
+                    </div>
+                </div>
+        
+                <div class="service-card">
+                    <img src="src/Imgs/IconeVestido.png" alt="Roupas de Festa" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Roupas de Festa</h3>
+                        <p class="card-description">Criação de vestidos e trajes para casamentos, formaturas e eventos especiais.</p>
+                    </div>
+                </div>
+        
+                <div class="service-card">
+                    <img src="src/Imgs/IconeMaquina.png" alt="Consultoria de Estilo" class="card-image">
+                    <div class="card-content">
+                        <h3 class="card-title">Fantasia e acessorios</h3>
+                        <p class="card-description">Criação e confecção de artigos festivos</p>
+                    </div>
                 </div>
             </div>
-                
-        </div>
-       </section>
+        </section>
     </main>
 
+
     <footer>
-        <div id="footer_content">
-            <div id="footer_contacts">
-                <h1>Logo</h1>
-                <p> Frase Aqui </p>
+    <div id="footer_content">
+        <div id="footer_contacts">
+            <img src="src/Imgs/Logo2.png" alt="Logo Costuras da Rai" id="footer_logo">
+            <p>Paixão em cada ponto, estilo em cada detalhe.</p>
 
-                <div id="footer_media">
-                    <a href="#" class="footer-link" id="instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="#" class="footer-link" id="facebook">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-
-                    <a href="#" class="footer-link" id="google">
-                        <i class="fa-brands fa-google"></i>
-                    </a>
-                </div>
-            </div>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Blog</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 1</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 2</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 3</a>
-                </li>
-            </ul>
-
-            <ul class="footer-list">
-                <li>
-                    <h3>Prod</h3>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 4</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 5</a>
-                </li>
-                <li>
-                    <a href="#" class="footer-link">Texto 6</a>
-                </li>
-            </ul>
-
-            <div id="footer_subscribe">
-                <h3>Subs</h3>
-                <p>
-                    Entre com seu email para receber nossas novidades
-                </p>
-
-                <div id="input_group">
-                    <input type="email" id="email">
-                    <button>
-                        <i class="fa-solid fa-envelope"></i>
-                    </button>
-                </div>
+            <div id="footer_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </div>
         </div>
 
-    </footer>
+        <div class="footer-list" id="footer_location">
+            <h3>Onde nos encontrar</h3>
+            <a href="https://maps.app.goo.gl/nD3crvYnRaD2TxPa8" target="_blank" class="footer-link">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span>Rua Monsenhor José Mendes, 278<br>Espirito Santo do Pinhal, SP</span>
+            </a>
+        </div>
+
+        <div id="footer_subscribe">
+            <h3>Fique por dentro</h3>
+            <p>Receba nossas novidades exclusivas por e-mail.</p>
+            <div id="input_group">
+                <input type="email" id="email" placeholder="Seu melhor e-mail">
+                <button>
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169; 2025 Costuras da Rai. Todos os direitos reservados.
+    </div>
+</footer>
 
     <script src="src/javascript/script.js"></script>
 </body>
