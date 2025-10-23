@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/home.css">
     <link rel="stylesheet" href="src/styles/menu.css">
+    <link rel="stylesheet" href="src/styles/sobre.css">
     <link rel="stylesheet" href="src/styles/footer.css">
-
+    <link rel="stylesheet" href="src/styles/sobre.css">
+    
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <title>Landing Page - Costuras da Rai</title>
@@ -21,7 +22,6 @@
     <header>
         <nav id="navbar">
             <img src="src/Imgs/Logo2.png" alt="Costuras da Rai" class="logo-navbar">
-
             <ul id="nav_list">
                 <li class="nav-item active">
                     <a href="#home">Inicio</a>
@@ -33,16 +33,13 @@
                     <a href="#sobre">Sobre</a>
                 </li>
             </ul>
-
             <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
                 Agende um horario
             </button>
-
             <button id="mobile_btn">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </nav>
-
         <div id="mobile_menu">
             <ul id="mobile_nav_list">
                 <li class="nav-item">
@@ -55,12 +52,10 @@
                     <a href="#sobre">Sobre</a>
                 </li>
             </ul>
-
             <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
                 Agende um horario
             </button>
         </div>
-
     </header>
 
     <main id="content">
@@ -70,14 +65,11 @@
             <h1 class="title">
                 Seu Estilo Sob <span>Medida</span>
             </h1>
-
             <p class="description">
                 Paixão em cada ponto, estilo em cada detalhe.
             </p>
-
             <div id="cta_buttons">
                 <a href="#" class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">Agende seu Horario</a>
-                
                 <a href="tel: +00000000" id="phone_button">
                     <button class="btn-default">
                         <i class="fa-brands fa-whatsapp"></i>
@@ -85,7 +77,6 @@
                     (19)99943-7526
                 </a>
             </div>
-
             <div class="social-media-buttons">
                 <a href="">
                     <i class="fa-brands fa-instagram"></i>
@@ -95,7 +86,6 @@
                 </a>
             </div>
         </div>
-
         <div id="banner">
             <img src="src/Imgs/BannerSombreado (1).png" alt="">
         </div>
@@ -104,87 +94,159 @@
        <section id="menu">
             <h2 class="section-title">Serviços</h2>
             <h3 class="section-subtitle">Conheça meu serviço</h3>
-        
             <div class="service-card-container">
-                <div class="service-card">
+                <div class="service-card" data-modal-target="#modal-criacao">
                     <img src="src/Imgs/IconeTesoura.png" alt="Criação Sob Medida" class="card-image">
                     <div class="card-content">
                         <h3 class="card-title">Criação Sob Medida</h3>
                         <p class="card-description">Desenvolvimento de peças únicas, desde o design inicial até o acabamento final.</p>
                     </div>
                 </div>
-        
-                <div class="service-card">
+                <div class="service-card" data-modal-target="#modal-ajustes">
                     <img src="src/Imgs/IconeAlfinete.png" alt="Ajustes e Reparos" class="card-image">
                     <div class="card-content">
                         <h3 class="card-title">Ajustes e Reparos</h3>
                         <p class="card-description">Ajustes de caimento, bainhas, consertos e customização de peças do seu guarda-roupa.</p>
                     </div>
                 </div>
-        
-                <div class="service-card">
-                    <img src="src/Imgs/IconeVestido.png" alt="Roupas de Festa" class="card-image">
+                <div class="service-card" data-modal-target="#modal-festa">
+                    <img src="src/Imgs/IconeVestido.png" alt="Roupas de Balé" class="card-image">
                     <div class="card-content">
-                        <h3 class="card-title">Roupas de Festa</h3>
-                        <p class="card-description">Criação de vestidos e trajes para casamentos, formaturas e eventos especiais.</p>
+                        <h3 class="card-title">Roupas de Balé</h3>
+                        <p class="card-description">Criação de figurinos e tutus para apresentações de balé e dança.</p>
                     </div>
                 </div>
-        
-                <div class="service-card">
-                    <img src="src/Imgs/IconeMaquina.png" alt="Consultoria de Estilo" class="card-image">
+                <div class="service-card" data-modal-target="#modal-fantasia">
+                    <img src="src/Imgs/IconeMaquina.png" alt="Fantasia e Acessórios" class="card-image">
                     <div class="card-content">
-                        <h3 class="card-title">Fantasia e acessorios</h3>
+                        <h3 class="card-title">Fantasia e acessórios</h3>
                         <p class="card-description">Criação e confecção de artigos festivos</p>
                     </div>
                 </div>
             </div>
-        </section>
+       </section>
+
+       <section id="sobre">
+            <div class="about-image">
+                <img src="src/Imgs/foto-sobre.jpg" alt="Foto do Ateliê Costuras da Rai">
+            </div>
+
+            <div class="about-content">
+                <h2 class="section-title">Nossa História</h2>
+                <h3 class="section-subtitle">Feito com alma e coração</h3>
+                <p>
+                    Olá, eu sou a Rai! Minha paixão é transformar tecidos em peças que contam histórias. O "Costuras da Rai" nasceu do sonho de criar roupas que não apenas vistam bem, mas que também celebrem a individualidade de cada pessoa.
+                </p>
+                <p>
+                    Acredito no poder da costura artesanal, onde cada ponto é dado com cuidado e cada acabamento é pensado para ser perfeito. Do ajuste mais simples ao figurino de balé mais elaborado, minha missão é entregar qualidade, exclusividade e um caimento impecável.
+                </p>
+            </div>
+       </section>
     </main>
 
+    <div id="modal-criacao" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-icon-container">
+                <img src="src/Imgs/IconeTesoura.png" alt="Ícone de Criação" class="modal-service-icon">
+            </div>
+            <div class="modal-body-layout">
+                <img src="src/Imgs/MateriasAtelie.png" alt="Criação Sob Medida" class="modal-image-display">
+                <div class="modal-text-content">
+                    <h2>Criação Sob Medida</h2>
+                    <p>Transformamos suas ideias em realidade. Este serviço é perfeito para quem busca uma peça exclusiva, com caimento impecável e que reflita sua personalidade. Ideal para vestidos de noiva, trajes de gala ou qualquer roupa que você sempre sonhou.</p>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <div id="modal-ajustes" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-icon-container">
+                <img src="src/Imgs/IconeAlfinete.png" alt="Ícone de Ajustes" class="modal-service-icon">
+            </div>
+            <div class="modal-body-layout">
+                <img src="src/Imgs/ManequimFoto.png" alt="Ajustes e Reparos" class="modal-image-display">
+                <div class="modal-text-content">
+                    <h2>Ajustes e Reparos</h2>
+                    <p>Dê uma nova vida às suas roupas favoritas! Realizamos todos os tipos de ajustes, como bainhas, apertar ou alargar peças, troca de zíperes e reparos em geral. Trazemos de volta o caimento perfeito para que você continue usando o que mais ama.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-festa" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-icon-container">
+                <img src="src/Imgs/IconeVestido.png" alt="Ícone de Roupas de Balé" class="modal-service-icon">
+            </div>
+            <div class="modal-body-layout">
+                <img src="src/Imgs/placeholder.jpg" alt="Roupas de Balé" class="modal-image-display">
+                <div class="modal-text-content">
+                    <h2>Roupas de Balé</h2>
+                    <p>Desenvolvemos figurinos e tutus sob medida para apresentações de balé e dança, garantindo conforto, beleza e movimento perfeitos para o palco.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-fantasia" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <div class="modal-icon-container">
+                <img src="src/Imgs/IconeMaquina.png" alt="Ícone de Fantasia" class="modal-service-icon">
+            </div>
+            <div class="modal-body-layout">
+                <img src="src/Imgs/placeholder.jpg" alt="Fantasia e Acessórios" class="modal-image-display">
+                <div class="modal-text-content">
+                    <h2>Fantasia e Acessórios</h2>
+                    <p>Dê vida à sua imaginação! Criamos fantasias personalizadas para festas temáticas, carnaval e eventos, além de acessórios únicos como bolsas de tecido, nécessaires e outros itens que complementam seu estilo com um toque artesanal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-    <div id="footer_content">
-        <div id="footer_contacts">
-            <img src="src/Imgs/Logo2.png" alt="Logo Costuras da Rai" id="footer_logo">
-            <p>Paixão em cada ponto, estilo em cada detalhe.</p>
-
-            <div id="footer_media">
-                <a href="#" class="footer-link" id="instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="#" class="footer-link" id="facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                </a>
-                <a href="#" class="footer-link" id="whatsapp">
-                    <i class="fa-brands fa-whatsapp"></i>
+        <div id="footer_content">
+            <div id="footer_contacts">
+                <img src="src/Imgs/Logo2.png" alt="Logo Costuras da Rai" id="footer_logo">
+                <p>Paixão em cada ponto, estilo em cada detalhe.</p>
+                <div id="footer_media">
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-list" id="footer_location">
+                <h3>Onde nos encontrar</h3>
+                <a href="https://maps.app.goo.gl/nD3crvYnRaD2TxPa8" target="_blank" class="footer-link">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span>Rua Monsenhor José Mendes, 278<br>Espirito Santo do Pinhal, SP</span>
                 </a>
             </div>
-        </div>
-
-        <div class="footer-list" id="footer_location">
-            <h3>Onde nos encontrar</h3>
-            <a href="https://maps.app.goo.gl/nD3crvYnRaD2TxPa8" target="_blank" class="footer-link">
-                <i class="fa-solid fa-map-location-dot"></i>
-                <span>Rua Monsenhor José Mendes, 278<br>Espirito Santo do Pinhal, SP</span>
-            </a>
-        </div>
-
-        <div id="footer_subscribe">
-            <h3>Fique por dentro</h3>
-            <p>Receba nossas novidades exclusivas por e-mail.</p>
-            <div id="input_group">
-                <input type="email" id="email" placeholder="Seu melhor e-mail">
-                <button>
-                    <i class="fa-solid fa-envelope"></i>
-                </button>
+            <div id="footer_subscribe">
+                <h3>Onde nos encontrar</h3>
+                <p>Receba nossas novidades exclusivas por e-mail.</p>
+                <div id="input_group">
+                    <input type="email" id="email" placeholder="Seu melhor e-mail">
+                    <button>
+                        <i class="fa-solid fa-envelope"></i>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-
-    <div id="footer_copyright">
-        &#169; 2025 Costuras da Rai. Todos os direitos reservados.
-    </div>
-</footer>
+        <div id="footer_copyright">
+            © 2025 Costuras da Rai. Todos os direitos reservados.
+        </div>
+    </footer>
 
     <script src="src/javascript/script.js"></script>
 </body>
