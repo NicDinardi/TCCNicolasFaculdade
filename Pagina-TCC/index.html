@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="src/styles/styles.css">
     <link rel="stylesheet" href="src/styles/header.css">
     <link rel="stylesheet" href="src/styles/home.css">
     <link rel="stylesheet" href="src/styles/menu.css">
     <link rel="stylesheet" href="src/styles/sobre.css">
+    <link rel="stylesheet" href="src/styles/faq.css">
     <link rel="stylesheet" href="src/styles/footer.css">
-    <link rel="stylesheet" href="src/styles/sobre.css">
     
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <title>Landing Page - Costuras da Rai</title>
 </head>
 <body>
@@ -31,6 +37,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq">FAQ</a>
                 </li>
             </ul>
             <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
@@ -50,6 +59,9 @@
                 </li>
                 <li class="nav-item">
                     <a href="#sobre">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#faq">FAQ</a>
                 </li>
             </ul>
             <button class="btn-default" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/dinardinicolas0912/30min?primary_color=e0bfa7'});return false;">
@@ -78,10 +90,10 @@
                 </a>
             </div>
             <div class="social-media-buttons">
-                <a href="">
+                <a href="https://www.instagram.com/costuras_da_rai/" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/art.manha.1829?locale=pt_BR" target="_blank">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
@@ -128,7 +140,14 @@
 
        <section id="sobre">
             <div class="about-image">
-                <img src="src/Imgs/foto-sobre.jpg" alt="Foto do Ateliê Costuras da Rai">
+                <div class="swiper about-swiper">
+                    <div class="swiper-wrapper">
+                        </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <p class="about-loading">Carregando...</p>
             </div>
 
             <div class="about-content">
@@ -142,6 +161,54 @@
                 </p>
             </div>
        </section>
+       
+       <section id="faq">
+            <h2 class="section-title">Dúvidas Frequentes</h2>
+            <h3 class="section-subtitle">Tire suas dúvidas</h3>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quanto tempo demora um ajuste simples?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ajustes simples, como bainhas ou apertar a cintura, geralmente ficam prontos em até 2 dias úteis. Para casos de urgência, por favor, entre em contato para verificarmos a disponibilidade.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Vocês fazem criação de peças do zero?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim! Esse é o nosso serviço de "Criação Sob Medida". Você pode agendar um horário para conversarmos sobre sua ideia. Vamos desenhar o croqui, ajudar na escolha dos tecidos e criar uma peça exclusiva para você.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Quais formas de pagamento vocês aceitam?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aceitamos Pix, dinheiro e cartões de débito e crédito. Para peças sob medida, pedimos um sinal de 50% no início do projeto e o restante na entrega.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Preciso levar o tecido para uma criação sob medida?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode trazer o seu próprio tecido, ou podemos ir juntas a uma loja especializada para escolher o material ideal para o seu projeto. A assessoria na escolha do tecido já está incluída no serviço.</p>
+                    </div>
+                </div>
+            </div>
+       </section>
+
     </main>
 
     <div id="modal-criacao" class="modal">
@@ -170,7 +237,7 @@
                 <img src="src/Imgs/ManequimFoto.png" alt="Ajustes e Reparos" class="modal-image-display">
                 <div class="modal-text-content">
                     <h2>Ajustes e Reparos</h2>
-                    <p>Dê uma nova vida às suas roupas favoritas! Realizamos todos os tipos de ajustes, como bainhas, apertar ou alargar peças, troca de zíperes e reparos em geral. Trazemos de volta o caimento perfeito para que você continue usando o que mais ama.</p>
+                    <p>Dê uma nova vida às suas roupas favoritas! Realizamos todos os tipos de ajustes, como bainhas, apertar ou alargar peças, troca de zíperes e reparos em geral. Trazemos de volta o caimento perfeito para que you continue usando o que mais ama.</p>
                 </div>
             </div>
         </div>
@@ -214,10 +281,10 @@
                 <img src="src/Imgs/Logo2.png" alt="Logo Costuras da Rai" id="footer_logo">
                 <p>Paixão em cada ponto, estilo em cada detalhe.</p>
                 <div id="footer_media">
-                    <a href="#" class="footer-link" id="instagram">
+                    <a href="https://www.instagram.com/costuras_da_rai/" target="_blank" class="footer-link" id="instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="#" class="footer-link" id="facebook">
+                    <a href="https://www.facebook.com/art.manha.1829?locale=pt_BR" target="_blank" class="footer-link" id="facebook">
                         <i class="fa-brands fa-facebook"></i>
                     </a>
                     <a href="#" class="footer-link" id="whatsapp">
@@ -233,14 +300,14 @@
                 </a>
             </div>
             <div id="footer_subscribe">
-                <h3>Onde nos encontrar</h3>
-                <p>Receba nossas novidades exclusivas por e-mail.</p>
-                <div id="input_group">
-                    <input type="email" id="email" placeholder="Seu melhor e-mail">
-                    <button>
-                        <i class="fa-solid fa-envelope"></i>
-                    </button>
-                </div>
+                <h3>Entre em contato</h3>
+                <p>Envie-nos um e-mail com suas dúvidas ou ideias.</p>
+                
+                <a href="mailto:contato@costurasdarai.com" class="btn-default" id="footer_email_button">
+                    <i class="fa-solid fa-envelope"></i>
+                      Enviar E-mail
+                </a>
+
             </div>
         </div>
         <div id="footer_copyright">
@@ -248,6 +315,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="src/javascript/script.js"></script>
 </body>
 </html>

@@ -1,35 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-:root{
---champagne-pink: #ffe7daff;
---champagne-pink-2: #fdebddff;
---pale-dogwood: #d1b3a6ff;
---beaver: #997a6eff;
---liver: #6a483cff;
+:root {
+    --champagne-pink: #ffe7daff;
+    --champagne-pink-2: #fdebddff;
+    --pale-dogwood: #d1b3a6ff;
+    --beaver: #997a6eff;
+    --liver: #6a483cff;
 }
-
 * {
     font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: var(--champagne-pink);
     overflow-x: hidden;
 }
-
 section {
     padding: 28px 8%;
 }
-
-.btn-default{
+.btn-default {
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--beaver) ;
+    background-color: var(--beaver);
     border-radius: 12px;
     padding: 10px 14px;
     font-weight: 500;
@@ -37,16 +33,14 @@ section {
     cursor: pointer;
     transition: background-color .3s ease-in;
 }
-.btn-default:hover{
+.btn-default:hover {
     background-color: var(--liver);
 }
-
-.social-media-buttons{
+.social-media-buttons {
     display: flex;
     gap: 18px;
 }
-
-.social-media-buttons a{
+.social-media-buttons a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,30 +53,24 @@ section {
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
     transition: box-shadow .3s ease;
 }
-
-.social-media-buttons a:hover{
-    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);    
+.social-media-buttons a:hover {
+    box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.1);
 }
-
 .section-title {
     color: var(--beaver);
     font-size: 1.5rem;
 }
-
 .section-subtitle {
     font-size: 2.18rem;
 }
-
 .service-card {
     cursor: pointer;
 }
-
-/* ESTILOS DO MODAL (POP-UP) - PROPOSTA 2: CARTÃO VERTICAL (COM ANIMAÇÃO) */
 .modal {
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    display: flex; /* <-- CORREÇÃO APLICADA AQUI */
+    display: flex;
     z-index: 1000;
     left: 0;
     top: 0;
@@ -93,15 +81,13 @@ section {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    transition: visibility 0s 0.3s, opacity 0.3s ease-out; /* Ajuste na transição */
+    transition: visibility 0s 0.3s, opacity 0.3s ease-out;
 }
-
 .modal.active {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s 0s, opacity 0.3s ease-out; /* Ajuste na transição */
+    transition: visibility 0s 0s, opacity 0.3s ease-out;
 }
-
 .modal-content {
     background-color: #ffffff;
     padding: 0;
@@ -117,12 +103,10 @@ section {
     transform: scale(0.95) translateY(-20px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
-
 .modal.active .modal-content {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+    opacity: 1 !important;
+    transform: scale(1) translateY(0) !important;
 }
-
 .close-button {
     color: #fff;
     position: absolute;
@@ -135,12 +119,10 @@ section {
     transition: color 0.3s;
     text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
-
 .close-button:hover,
 .close-button:focus {
     color: #eee;
 }
-
 .modal-icon-container {
     position: absolute;
     top: 210px;
@@ -159,19 +141,16 @@ section {
     box-sizing: border-box;
     border: 3px solid var(--champagne-pink);
 }
-
 .modal-service-icon {
     width: 100%;
     height: auto;
     object-fit: contain;
 }
-
 .modal-body-layout {
     display: flex;
     width: 100%;
     flex-direction: column;
 }
-
 .modal-image-display {
     width: 100%;
     height: 250px;
@@ -179,7 +158,6 @@ section {
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
-
 .modal-text-content {
     background-color: var(--champagne-pink);
     width: 100%;
@@ -192,36 +170,30 @@ section {
     border-radius: 0 0 15px 15px;
     text-align: center;
 }
-
 .modal-text-content h2 {
     color: var(--liver);
     font-size: 1.8rem;
 }
-
 .modal-text-content p {
     color: #333;
     line-height: 1.7;
     font-size: 1rem;
 }
-
 @media screen and (max-width: 900px) {
     .modal-content {
         max-height: 90vh;
         overflow-y: auto;
     }
 }
-
 @media screen and (max-width: 500px) {
     .modal-icon-container {
         width: 70px;
         height: 70px;
         top: 165px;
     }
-
     .modal-image-display {
         height: 200px;
     }
-
     .modal-text-content {
         padding: 50px 25px 25px 25px;
     }

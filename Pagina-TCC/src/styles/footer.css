@@ -1,14 +1,15 @@
 footer {
     width: 100%;
     color: var(--champagne-pink);
+    background: linear-gradient(to bottom, var(--champagne-pink), var(--beaver), var(--liver));
 }
 
 #footer_content {
-    background-color: var(--beaver);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 3rem 3.5rem;
     gap: 2.5rem;
+    background-color: transparent;
 }
 
 #footer_contacts p {
@@ -78,40 +79,16 @@ footer {
     margin-bottom: 1.5rem;
 }
 
-#input_group {
-    display: flex;
-    align-items: center;
-    background-color: var(--liver);
-    border-radius: 4px;
-}
-
-#input_group input {
-    all: unset;
-    padding: 0.75rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#input_group button {
-    background-color: var(--pale-dogwood);
-    border: none;
-    color: var(--liver);
-    padding: 0 1.25rem;
-    font-size: 1.25rem;
-    height: 100%;
-    cursor: pointer;
-    transition: background-color 0.4s;
-}
-
-#input_group button:hover {
-    background-color: var(--champagne-pink);
+#footer_email_button {
+    text-decoration: none;
+    color: var(--champagne-pink); 
 }
 
 #footer_copyright {
-    background-color: var(--liver);
     font-size: 0.8rem;
     padding: 1.5rem;
     text-align: center;
+    background-color: transparent; 
 } 
 
 @media screen and (max-width: 1170px) {
