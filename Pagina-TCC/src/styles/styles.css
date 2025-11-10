@@ -93,7 +93,7 @@ section {
     padding: 0;
     border-radius: 15px;
     width: 100%;
-    max-width: 600px;
+    max-width: 850px;
     position: relative;
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     display: flex;
@@ -103,21 +103,22 @@ section {
     transform: scale(0.95) translateY(-20px);
     transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
+
 .modal.active .modal-content {
     opacity: 1 !important;
     transform: scale(1) translateY(0) !important;
 }
 .close-button {
-    color: #fff;
+    color: var(--liver);
     position: absolute;
     top: 15px;
     right: 25px;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-    z-index: 10;
+    z-index: 11;
     transition: color 0.3s;
-    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    text-shadow: none;
 }
 .close-button:hover,
 .close-button:focus {
@@ -125,9 +126,6 @@ section {
 }
 .modal-icon-container {
     position: absolute;
-    top: 210px;
-    left: 50%;
-    transform: translateX(-50%);
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -136,10 +134,15 @@ section {
     justify-content: center;
     align-items: center;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    z-index: 5;
+    z-index: 12;
     padding: 15px;
     box-sizing: border-box;
     border: 3px solid var(--champagne-pink);
+    flex-shrink: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 }
 .modal-service-icon {
     width: 100%;
@@ -149,26 +152,30 @@ section {
 .modal-body-layout {
     display: flex;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: stretch;
 }
 .modal-image-display {
-    width: 100%;
-    height: 250px;
+    width: 45%;
+    height: auto;
     flex-shrink: 0;
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px 0 0 15px;
+    max-height: 600px;
 }
 .modal-text-content {
     background-color: var(--champagne-pink);
-    width: 100%;
-    padding: 60px 40px 40px 40px;
+    width: 55%;
+    padding: 40px 40px 40px 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    border-radius: 0 0 15px 15px;
+    border-radius: 0 15px 15px 0;
     text-align: center;
+    box-sizing: border-box;
+    position: static;
 }
 .modal-text-content h2 {
     color: var(--liver);
@@ -181,15 +188,41 @@ section {
 }
 @media screen and (max-width: 900px) {
     .modal-content {
+        max-width: 500px;
         max-height: 90vh;
         overflow-y: auto;
+        overflow-x: visible;
+    }
+
+    .modal-body-layout {
+        flex-direction: column;
+    }
+
+    .modal-image-display {
+        width: 100%;
+        height: 300px;
+        max-height: none;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .modal-text-content {
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+        padding: 50px 25px 25px 25px;
+    }
+
+    .modal-icon-container {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
     }
 }
 @media screen and (max-width: 500px) {
     .modal-icon-container {
         width: 70px;
         height: 70px;
-        top: 165px;
     }
     .modal-image-display {
         height: 200px;
@@ -197,4 +230,37 @@ section {
     .modal-text-content {
         padding: 50px 25px 25px 25px;
     }
+}
+
+.modal-text-content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--liver);
+    margin-bottom: 5px;
+}
+
+.modal-text-content h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--pale-dogwood);
+    margin: 15px auto 0 auto;
+}
+
+.modal-text-content h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--beaver);
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.modal-text-content p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.7;
 }
