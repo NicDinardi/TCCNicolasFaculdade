@@ -67,7 +67,7 @@ $(document).ready(function() {
     });
 
     ScrollReveal().reveal('#faq', {
-        origin: 'bottom', duration: 1500, distance: '10%', reset: true
+        origin: 'left', duration: 2000, distance: '20%', reset: true
     });
 
     const serviceCards = $('.service-card');
@@ -100,8 +100,7 @@ $(document).ready(function() {
     });
     
     
-    // --- CARREGAMENTO DINÂMICO DO CARROSSEL "SOBRE" (SUPABASE) ---
-    // Esta parte agora fica no final para não quebrar o resto do site.
+
     
     const SUPABASE_URL = 'https://qmnibfnhfbaojdqlqsxb.supabase.co';
     const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtbmliZm5oZmJhb2pkcWxxc3hiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2NjY2OTAsImV4cCI6MjA3NzI0MjY5MH0.yMFZb02zm2XMrSHteUKEmag5sz8kSdkq-UFDOLrnXVo';
